@@ -20,6 +20,13 @@ def test_devision_prohibited():
     except ValueError as e:
         print("Test string-devision passed")
 
+    try:
+        devide([1,2,3], [4,5,6])
+        print("Test list-division failed")
+        assert False
+    except:
+        print("Test list-division passed")
+
 def test_devide_zero():
     a = 2
     b = 0
