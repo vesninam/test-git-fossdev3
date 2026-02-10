@@ -12,6 +12,14 @@ def test_devide():
     result = 0.5
     assert devide(a, b) == result
 
+def test_devision_prohibited():
+    try:
+        devide([1,2,3], [4,5,6])
+        print("Test list-division failed")
+        assert False
+    except:
+        print("Test list-division passed")
+
 def test_devide_zero():
     a = 2
     b = 0
@@ -25,3 +33,6 @@ def test_devide_zero():
 if __name__ == "__main__":
     test_devide()
     test_sum()
+    test_devision_prohibited()
+
+
