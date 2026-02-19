@@ -1,4 +1,4 @@
-from script import sum, devide
+from script import sum, devide, substruct
 
 def test_sum():
     a = 1
@@ -35,9 +35,18 @@ def test_devide_zero():
         assert False
     except ValueError as e:
         print("Test (zero-devision) passed")
+
+def test_substruct():
+    a = 5
+    b = 3
+    result = 2
+    assert substruct(a, b) == result
+    print("Test substruc passed")
     
 
 if __name__ == "__main__":
     test_devide()
     test_sum()
     test_devision_prohibited()
+    test_substruct()
+
