@@ -1,3 +1,4 @@
+
 #| Годовой доход | Ставка | Расчет налога |
 #| :--- | :--- | :--- |
 #| **До 2,4 млн руб.** | 13% | 13% от дохода |
@@ -8,6 +9,7 @@
 
 # TODO make test to obey principles
 
+import pytest
 from ndfl import calculate_ndfl
 
 def test_ndfl_tier_1_basic():
@@ -31,6 +33,8 @@ def test_ndfl_tier_5_basic():
     #               + 30_000_000 * 0.20 + 10_000_000 * 0.22
     assert calculate_ndfl(60_000_000) == 11_602_000
 
-
+@pytest.mark.xfail
+def test_ndfl_fails_negative_income():
+    calculate_ndfl(-1000)
 
     
