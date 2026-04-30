@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "product-service"
+version = "0.1.0"
+description = ""
+authors = ["Artem Vesnin <artem_vesnin@iszf.irk.ru>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.136.1"
+uvicorn = {extras = ["standart"], version = "^0.46.0"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
